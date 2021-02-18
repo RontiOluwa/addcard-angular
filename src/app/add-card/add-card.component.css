@@ -1,0 +1,23 @@
+.viewcard{
+    background: #a63131;
+    padding: 10px;
+    color: #fff;
+    font-size: 13px;
+    text-decoration: none;
+    float: inline-end;
+}
+/* .success{
+    width: 100%;
+    background: #096809;
+    color: #fff;
+    padding: 17px;
+    text-align: center;
+    border-radius: 19px;
+} */
+.header{
+    font-size: 20px;
+    padding: 11px;
+}
+.success{
+    text-align: center;
+}

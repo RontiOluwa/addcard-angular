@@ -1,0 +1,35 @@
+<div class="container">
+
+    <h3>List of Cards</h3>
+    <ul>
+      <!-- <li >
+        <a></a>
+      </li> -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Card Number</th>
+            <th scope="col">Card Holder</th>
+            <th scope="col">Date</th>
+            <th scope="col">CCV</th>
+            <th scope="col">Amount</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let card of cards | async">
+          <tr>
+            <th>{{ card.card_number }}</th>
+            <td>{{ card.card_holder }}</td>
+            <td>{{ card.date }}</td>
+            <td>{{ card.ccv }}</td>
+            <td>{{ card.amount }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <div *ngIf="cards">
+        No Card Created yet
+      </div>
+    </ul>
+    <a href="#" class="addcard" routerLink="/addcard">Add Card</a>
+  </div>
+  
+ 

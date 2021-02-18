@@ -1,0 +1,14 @@
+.container{
+    padding: 16px;
+    text-align: center;
+    margin: 50px auto;
+}
+.addcard{
+    background: #5151c4;
+    padding: 10px;
+    color: #fff;
+    border-radius: 101px;
+    font-size: 13px;
+    margin-top: 20px;
+    text-decoration: none;
+}

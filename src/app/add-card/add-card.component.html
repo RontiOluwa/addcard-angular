@@ -1,0 +1,41 @@
+<div class="container pt-5">
+    <div class="row justify-content-sm-center pt-5">
+        <div class="col-sm-6 shadow round pb-3">
+          <h1 class="text-center pt-3 text-secondary header">CREDIT CARD PAYMENT</h1>
+            <form [formGroup]="exform">
+              <p class="success">{{ success }}</p>
+                <div class="form-group">
+                  <label class="col-form-label">Credit Card Number:</label>
+                  <input formControlName="card_number" type="text" class="form-control">
+                  <small *ngIf="card_number.invalid && card_number.touched" class="text-danger">Credit Card Number is Required And Should Contain Only Numbers</small> 
+                </div>
+                <div class="form-group">
+                  <label class="col-form-label">Card Holder:</label>
+                  <input formControlName="card_name" type="text" class="form-control">
+                  <small *ngIf="card_name.invalid && card_name.touched" class="text-danger">Card Holder is Required And Should Contain Only String Characters</small> 
+                </div>
+                
+                <div class="form-group">
+                  <label class="col-form-label">Expiration Date:</label>
+                  <input formControlName="date" type="date" class="form-control">
+                  <small *ngIf="date.invalid && date.touched" class="text-danger">Expiration Date is Required and Should be greater than Today</small> 
+                </div>
+  
+                <div class="form-group">
+                  <label class="col-form-label">Security Code:</label>
+                  <input formControlName="ccv" type="text" class="form-control" >
+                  <small *ngIf="ccv.invalid && ccv.touched" class="text-danger">Security Code should be 3 Digit</small>
+                </div>
+                <div class="form-group">
+                  <label class="col-form-label">Amount:</label>
+                  <input formControlName="amount" type="text" class="form-control" >
+                  <small *ngIf="amount.invalid && amount.touched" class="text-danger">
+                    Amount is Required, should be greater than 0 and must be a number
+                  </small>
+                </div>
+                <button (click)="clicksub()" [disabled]="exform.invalid" type="button" class="btn btn-primary">Send message</button>
+                <a href="#" class="viewcard" routerLink="/">View Cards</a>
+            </form>
+        </div>
+    </div>
+</div>
